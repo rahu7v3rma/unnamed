@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: kacifyapi
     env_file:
-      - fileName: ./api/.env
+      - ./api/.env
   web:
     build:
       context: ./frontend
@@ -16,4 +16,4 @@ services:
     depends_on:
       - api
     env_file:
-      - fileName: ./frontend/.env
+      - ./frontend/.env
