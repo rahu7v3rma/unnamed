@@ -1,4 +1,4 @@
-name: ci-cd
+name: CI workflow
 
 on:
   pull_request:
@@ -7,19 +7,14 @@ on:
 
 jobs:
   ci:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
+      - name: Docker build frontend
+        run: cd frontend && docker build -t kacifyfrontend .
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
+      - name: Docker build API
+        run: cd api && docker build -t kacifyapi .
