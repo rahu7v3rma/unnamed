@@ -2,9 +2,9 @@ node_modules
 .env
 tasks.md
 build
-practice.js
+practice
 privateKey.pem
 ssh.sh
-practice.py
 actions-runner
 .DS_Store
+mongodb
