@@ -12,16 +12,16 @@ jobs:
     steps:
       - name: Pull latest code
         run: git pull
-        working-directory: ~/kacify
+        working-directory: /Users/rahul/Documents/kacify
 
       - name: Docker build frontend
         run: cd frontend && docker build -t kacifyfrontend .
-        working-directory: ~/kacify/frontend
+        working-directory: /Users/rahul/Documents/kacify/frontend
 
       - name: Docker build API
         run: cd api && docker build -t kacifyapi .
-        working-directory: ~/kacify/api
+        working-directory: /Users/rahul/Documents/kacify/api
 
       - name: Start docker
         run: docker-compose up -d
-        working-directory: ~/kacify
+        working-directory: /Users/rahul/Documents/kacify
