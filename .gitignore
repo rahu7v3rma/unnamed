@@ -7,3 +7,4 @@ privateKey.pem
 ssh.sh
 practice.py
 actions-runner
+.DS_Store

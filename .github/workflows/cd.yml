@@ -10,14 +10,18 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Pull latest code
+        run: git pull
+        working-directory: ~/kacify
 
-      - name: Build frontend
-        run: docker build -t kacifyfrontend frontend
+      - name: Docker build frontend
+        run: cd frontend && docker build -t kacifyfrontend .
+        working-directory: ~/kacify/frontend
 
-      - name: Build API
-        run: docker build -t kacifyapi api
+      - name: Docker build API
+        run: cd api && docker build -t kacifyapi .
+        working-directory: ~/kacify/api
 
       - name: Start docker
         run: docker-compose up -d
+        working-directory: ~/kacify
