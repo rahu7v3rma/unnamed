@@ -25,6 +25,14 @@ app.use("/user", UserRouter);
 app.use("/log", LogRouter);
 app.use("/cart", CartRouter);
 app.use("/order", OrderRouter);
+app.get("/test-env-variable", (req, res) => {
+  res.json({
+    success: true,
+    message: "Test env variable",
+    data: { testEnvVariable: process.env.TEST_ENV_VARIABLE },
+  });
+  return;
+});
 app.use(responseSerializer);
 app.use(notFoundHandler);
 app.use(errorHandler);

@@ -5,4 +5,4 @@
 - Database - MongoDB, SQLite, Redis
 - API - ExpressJS
 - Frontend - ReactJS
-- DevOps - Docker/DockerCompose, CI/CD(Github-Actions)
+- DevOps - Docker, CI/CD

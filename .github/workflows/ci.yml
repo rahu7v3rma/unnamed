@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Docker build frontend
-        run: cd frontend && docker build -t kacifyfrontend .
+        run: cd frontend && docker build -t kacify-frontend .
 
       - name: Docker build API
-        run: cd api && docker build -t kacifyapi .
+        run: cd api && docker build -t kacify-api .

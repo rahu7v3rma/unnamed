@@ -13,6 +13,7 @@ import Users from "./pages/users";
 import VendorProducts from "./pages/vendorProducts";
 import Cart from "./pages/cart";
 import Order from "./pages/order";
+import TestEnvVariable from "./pages/testEnvVariable";
 
 const root = createRoot(document.getElementById("root")!);
 
@@ -34,6 +35,7 @@ root.render(
       <Route path="/products" element={<AllProducts />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/order" element={<Order />} />
+      <Route path="/test-env-variable" element={<TestEnvVariable />} />
     </Routes>
   </BrowserRouter>
 );
