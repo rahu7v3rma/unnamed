@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: kacifyapi
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kacifyfrontend
+    depends_on:
+      - api
