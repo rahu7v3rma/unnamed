@@ -1,0 +1,23 @@
+name: CD workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cd:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build frontend
+        run: docker build -t kacifyfrontend frontend
+
+      - name: Build API
+        run: docker build -t kacifyapi api
+
+      - name: Start docker
+        run: docker-compose up -d
