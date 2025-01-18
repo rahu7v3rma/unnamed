@@ -1,0 +1,31 @@
+name: CD workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cd:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull latest changes
+        run: git pull
+        working-directory: ~/kacify
+
+      - name: Build frontend
+        run: |
+          npm install
+          npm run build
+        working-directory: ~/kacify/frontend
+
+      - name: Build API
+        run: |
+          npm install
+          npm run build
+        working-directory: ~/kacify/api
+
+      - name: Start services with Docker
+        run: docker-compose up -d
+        working-directory: ~/kacify
