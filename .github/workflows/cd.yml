@@ -15,11 +15,11 @@ jobs:
         working-directory: /Users/rahul/Documents/kacify
 
       - name: Docker build frontend
-        run: cd frontend && docker build -t kacifyfrontend .
+        run: docker build -t kacifyfrontend .
         working-directory: /Users/rahul/Documents/kacify/frontend
 
       - name: Docker build API
-        run: cd api && docker build -t kacifyapi .
+        run: docker build -t kacifyapi .
         working-directory: /Users/rahul/Documents/kacify/api
 
       - name: Start docker
