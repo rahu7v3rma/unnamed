@@ -1,6 +1,8 @@
 # kacify.store - an electronics ecommerce
 
 ## Tech Stack
+- Languages
+    - TypeScript
 - API
     - NodeJS
     - ExpressJS
