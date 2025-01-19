@@ -1,4 +1,3 @@
-# [UNDER DEVELOPMENT]
 # kacify.store - an electronics ecommerce
 
 ## Tech Stack
