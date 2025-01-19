@@ -8,3 +8,6 @@ ssh.sh
 actions-runner
 .DS_Store
 mongodb
+start.sh
+postgres
+redis
