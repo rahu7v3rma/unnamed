@@ -1,4 +1,4 @@
-# kacify.store - an electronics ecommerce
+clothing ecommerce
 
 ## Tech Stack
 - Languages
